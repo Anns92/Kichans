@@ -1,0 +1,226 @@
+﻿@inherits LayoutComponentBase
+<div class="wrapper">
+    <div class="overlay-sidebar d-md-none @NavMenuCssClass" @onclick="ToggleNavMenu"></div>
+    <!-- side bar -->
+
+    <nav id="sidebar" class="@NavMenuCssClass d-block d-md-none">
+        <div class="sidebar-header">
+            <a class="" href="#">
+                <img class="sidebar-image" src="assets/images/logo.png" alt=""   @onclick="ToggleNavMenu"/>
+            </a>
+            <div>
+                <i @onclick="ToggleNavMenu" id="dismiss" class="text-theme-color fa fa-arrow-left"></i>
+
+            </div>
+        </div>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="#needs" data-toggle="collapse" aria-expanded="false" class="text-decoration-none ">
+                    <i class="fa fa-home mr-2  text-theme-color"></i>
+                    <span>Your Needs</span>
+                    <!-- <i class="fa fa-chevron-down mt-1 pull-right"></i> -->
+                </a>
+                <ul class="collapse list-unstyled " id="needs">
+                    <li>
+                        <a class="text-decoration-none text-nowrap" href="/foreign_employee" @onclick="ToggleNavMenu">
+                            Foreign employee to
+                            Norway
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-decoration-none" href="/employee_abroad" @onclick="ToggleNavMenu">
+                            Employee going
+                            abroad
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#howweworks" data-toggle="collapse" aria-expanded="false" class="text-decoration-none">
+                    <i class="fa fa-wheelchair-alt mr-2  text-theme-color"></i>            <span>How we works</span>
+                    <!-- <i class="fa fa-chevron-down mt-1 pull-right"></i> -->
+                </a>
+                <ul class="collapse list-unstyled" id="howweworks">
+                    <li>
+                        <a class="text-decoration-none" href="/consulting" @onclick="ToggleNavMenu">Consulting</a>
+                    </li>
+                    <li>
+                        <a class="text-decoration-none" href="/training_support" @onclick="ToggleNavMenu">Training and support</a>
+                    </li>
+                    <li>
+                        <a class="text-decoration-none" href="/program_management" @onclick="ToggleNavMenu">Program management</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#cases" data-toggle="collapse" aria-expanded="false" class="text-decoration-none">
+                    <i class="fa fa-folder mr-2  text-theme-color"></i>
+                    <span>Cases</span>
+                    <!-- <i class="fa fa-chevron-down mt-1 pull-right"></i> -->
+                </a>
+                <ul class="collapse list-unstyled" id="cases">
+                    <li>
+                        <a class="text-decoration-none" href="/goingto_china" @onclick="ToggleNavMenu">Going from norway to china</a>
+                    </li>
+                    <li>
+                        <a class="text-decoration-none" href="/cometo_norway" @onclick="ToggleNavMenu">Going from italy to norway</a>
+                    </li>
+                    <li>
+                        <a class="text-decoration-none" href="/policy" @onclick="ToggleNavMenu">Policy and Procedures</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a class="text-decoration-none" href="/about" @onclick="ToggleNavMenu">  <i class="fa fa-users mr-2 text-theme-color"></i>About us</a>
+            </li>
+            <li>
+
+                <a class="text-decoration-none" href="/contact" @onclick="ToggleNavMenu"> <i class="fa fa-phone mr-2  text-theme-color"></i>Contact us</a>
+            </li>
+
+        </ul>
+    </nav>
+    <!-- side bar end -->
+    <!-- nav bar  -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light justify-content-start fixed-top top-bar">
+        <i @onclick="ToggleNavMenu" id="sidebarCollapse" data-target="#collapsibleNavbar"
+           class=" navbar-toggler fa fa-bars fa-2x mr-3 text-theme-color"></i>
+        <!-- <button class="navbar-toggler mr-3" type="button" id="sidebarCollapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <a class="navbar-brand" href="#">
+            <img src="assets/images/logo.png" alt="" />
+        </a>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav  mr-md-3  mx-lg-4">
+
+                <li class="nav-item  px-lg-1">
+                    <div class="dropdown">
+                        <a class="nav-link text-nowrap text-theme-color  " aria-haspopup="true" aria-expanded="false"
+                           id="dropdownMenu2">
+                            YOUR NEEDS
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-left bg-light" aria-labelledby="dropdownMenu2">
+                            <ul class="list-unstyled ">
+                                <li>
+                                    <a href="/foreign_employee" class="text-decoration-none text-nowrap ">
+                                        Foreign employee to
+                                        Norway
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/employee_abroad" class="text-decoration-none text-nowrap ">
+                                        Employee going
+                                        abroad
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item  px-lg-1">
+                    <div class="dropdown">
+                        <a class="nav-link text-nowrap text-theme-color  " aria-haspopup="true" aria-expanded="false"
+                           id="dropdownMenu3">
+                            HOW WE WORK
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-left bg-light" aria-labelledby="dropdownMenu3">
+                            <ul class="list-unstyled ">
+                                <li>
+                                    <a href="/consulting" class="text-decoration-none text-nowrap ">
+                                        Consulting
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/training_support" class="text-decoration-none text-nowrap ">
+                                        Training and Support
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/program_management" class="text-decoration-none text-nowrap ">
+                                        Program Management
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </li>
+
+
+
+                <li class="nav-item  px-lg-1">
+                    <div class="dropdown">
+                        <a class="nav-link text-nowrap text-theme-color  " aria-haspopup="true" aria-expanded="false"
+                           id="dropdownMenu3">
+                            CASES
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-left bg-light" aria-labelledby="dropdownMenu3">
+                            <ul class="list-unstyled ">
+                                <li>
+                                    <a href="/goingto_china" class="text-decoration-none text-nowrap ">
+                                        Going From Norway to China
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cometo_norway" class="text-decoration-none text-nowrap ">
+                                       Coming From to Italy to Norway+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/policy" class="text-decoration-none text-nowrap ">
+                                        Policy and Procedures
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </li>
+
+
+                
+
+                <li class="nav-item  px-lg-1">
+                    <a class="nav-link text-nowrap text-theme-color " href="/about">ABOUT US</a>
+                </li>
+
+
+                <li class="nav-item  px-lg-1">
+                    <a class="nav-link text-nowrap text-theme-color" href="/contact">CONTACT US</a>
+                </li>
+
+
+
+            </ul>
+        </div>
+    </nav>
+    <!-- nav bar end -->
+
+
+    @Body
+    <FooterBar />
+    <a href="#" style="color:white;" class="back-to-top  "><i class="fa fa-arrow-up" style="font-size: 25px;"></i></a>
+    <a href="#" style="color:white;" class=" back-to-top-mobile d-md-none"><i class="fa fa-arrow-up" style="font-size: 25px;"></i></a>
+</div>
+
+@code {
+    private bool collapseNavMenu = false;
+
+    private string NavMenuCssClass => collapseNavMenu ? "active" : null;
+
+  
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

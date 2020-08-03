@@ -1,0 +1,22 @@
+﻿<!-- banner -->
+    <div class="card bg-dark text-white text-center banner banner2 mb-3 mt-5">
+      <img src=@Image class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <div class="d-flex justify-content-center align-items-center banner-content px-1">
+          <div>
+            <h2 class="card-title ">@Title</h2>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- banner end -->
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public string Image { get; set; }
+}
